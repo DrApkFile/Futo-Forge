@@ -21,7 +21,7 @@ import { Slider } from "@/components/ui/slider"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import Link from "next/link"
-import Badge from "@/components/ui/badge"
+import { Badge } from "@/components/ui/badge"
 
 export default function PostBountyPage() {
   const [user, loadingAuth] = useAuthState(auth)
