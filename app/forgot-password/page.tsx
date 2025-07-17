@@ -10,6 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { ArrowLeft } from "lucide-react"
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("")
@@ -38,6 +39,14 @@ export default function ForgotPasswordPage() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-indigo-50 via-white to-purple-50 p-4">
+      <Button
+        variant="ghost"
+        className="absolute left-4 top-4 flex items-center text-gray-600 hover:text-gray-900"
+        onClick={() => window.history.back()}
+      >
+        <ArrowLeft className="h-4 w-4 mr-2" />
+        Back
+      </Button>
       <Card className="w-full max-w-md bg-white shadow-xl border border-gray-200">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl font-bold">Forgot Your Password?</CardTitle>

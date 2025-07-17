@@ -13,6 +13,7 @@ import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { FcGoogle } from "react-icons/fc"
+import { ArrowLeft } from "lucide-react"
 
 export default function SignInPage() {
   const [identifier, setIdentifier] = useState("") // Can be email or username
@@ -125,6 +126,14 @@ export default function SignInPage() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-indigo-50 via-white to-purple-50 p-4">
+      <Button
+        variant="ghost"
+        className="absolute left-4 top-4 flex items-center text-gray-600 hover:text-gray-900"
+        onClick={() => router.push("/")}
+      >
+        <ArrowLeft className="h-4 w-4 mr-2" />
+        Back to Home
+      </Button>
       <Card className="w-full max-w-md bg-white shadow-xl border border-gray-200">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl font-bold">Sign In to FutoForge</CardTitle>
