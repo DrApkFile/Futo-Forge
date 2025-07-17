@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* No @import url for Google Fonts here, handled by next/font */
+
+body {
+  /* Font family applied via Tailwind config using CSS variable from next/font */
+}
+
+.font-lakha {
+  /* Font family applied via Tailwind config using CSS variable from next/font */
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Vertical scrolling animation for recent earners */
+@keyframes vertical-scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%); /* Scrolls half the height of the duplicated content */
+  }
+}
+
+.animate-vertical-scroll {
+  animation: vertical-scroll 20s linear infinite; /* Speed remains at 20s */
+}
+
+.animate-vertical-scroll:hover {
+  animation-play-state: paused;
+}
